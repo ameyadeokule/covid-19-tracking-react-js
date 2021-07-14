@@ -7,9 +7,11 @@ function Table({ states }) {
 		<table className='table'>
 			{states.map((state) => (
 				<tr>
-					<td>{state.state}</td>
+					<td>{state.name}</td>
 					<td>
-						<strong>{numeral(state.cases).format('0,0')}</strong>
+						<strong>
+							{numeral(state.positiveCases).format('0,0')}
+						</strong>
 					</td>
 				</tr>
 			))}

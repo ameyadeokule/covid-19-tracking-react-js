@@ -18,7 +18,9 @@ function App() {
 
 	useEffect(() => {
 		const getCountryData = async () => {
-			await fetch('https://disease.sh/v3/covid-19/countries/usa')
+			await fetch(
+				'https://covid-19-tracker-backend.herokuapp.com/api/country',
+			)
 				.then((response) => response.json())
 				.then((data) => {
 					setCountryData({
@@ -33,7 +35,9 @@ function App() {
 
 	useEffect(() => {
 		const getStateData = async () => {
-			await fetch('https://disease.sh/v3/covid-19/states')
+			await fetch(
+				'https://covid-19-tracker-backend.herokuapp.com/api/states	',
+			)
 				.then((response) => response.json())
 				.then((data) => {
 					let sortedData = sortData(data)
@@ -77,7 +81,7 @@ function App() {
 			<Card className='app__right'>
 				<CardContent>
 					<div className='app__information'>
-						<h3>Live Cases by States</h3>
+						<h3>Total Cases by States</h3>
 						<Table states={statesData} />
 					</div>
 				</CardContent>

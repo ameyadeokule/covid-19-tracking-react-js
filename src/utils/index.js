@@ -3,7 +3,7 @@ import numeral from 'numeral'
 export const sortData = (data) => {
 	let sortedData = [...data]
 	sortedData.sort((a, b) => {
-		if (a.cases > b.cases) {
+		if (a.positiveCases > b.positiveCases) {
 			return -1
 		} else {
 			return 1

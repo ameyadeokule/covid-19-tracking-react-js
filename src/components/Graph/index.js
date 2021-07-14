@@ -3,9 +3,11 @@ import ReactApexCharts from 'react-apexcharts'
 import './Graph.css'
 
 function Graph({ statesData }) {
-	const seriesData = statesData.map((state) => state.cases)
+	const seriesData = statesData.map((state) => state.positiveCases)
+
 	console.log(seriesData)
-	const seriesCategories = statesData.map((state) => state.state)
+
+	const seriesCategories = statesData.map((state) => state.name)
 
 	const series = [
 		{
