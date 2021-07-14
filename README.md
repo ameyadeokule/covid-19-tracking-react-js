@@ -1,3 +1,5 @@
+# The Application is Hosted using Github Pages [HERE](https://ameyadeokule.github.io/covid-19-tracking-react-js/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
